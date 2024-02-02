@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <title>game.com</title>
+    <style>
+        *
+        {
+            font-family: sans-serif;
+        }
+        body{
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            min-height:100vh;
+            background:linear-gradient(blue 50%,white);
+            color:white;
+
+            
+            }
+            .wrapper{
+                background:transparent;
+                backdrop-filter: blur(20px);
+                position:relative;
+                right:170px;
+                
+                
+            }
+            input{
+                border-radius:50%;
+                height:80spx;
+                font-size:36px;
+                width:56px;
+                border:none;
+                outline:none;
+                border:2px solid rgb(2, 2, 94);
+                text-align:center;
+            }
+            
+            .h h1{
+                position: relative;
+                bottom:250px;
+                left:190px;
+                font-family:'Caveat', cursive;
+                font-size:50px;
+                text-decoration: underline;
+                background:rgb(2, 2, 94);
+                background-clip: text;
+                color:transparent;
+            }
+            p{
+                font-weight:bold;
+            }
+            .wrapper .para 
+            {
+                text-align: center;
+            }
+            button
+            {
+                padding:5px;
+                border-radius:5px;
+            }
+            
+           
+
+    </style>
+</head>
+<body>
+    <div class="h"><h1>Number guessing game</h1></div>
+    <div class="wrapper">
+    <h1>Guess the number(1-10)</h1>
+    
+    <div class="para">
+        <input id="num">
+    <button onclick="check()">check</button>
+    <p id="result">You are wrong/right</p>
+    <p id="guess">Guessed Number:</p>
+    <p id="original">Original Number:</p>
+</div>
+    </div>
+    <script>
+        var num=document.getElementById("num")
+        var result=document.getElementById("result")
+        var guess=document.getElementById("guess")
+        var original=document.getElementById("original")
+        function check()
+        {
+            var b=Number(num.value)
+            var c=Math.random()
+            var d=Math.floor((c*10)+1)
+            var g="Guessed Number: "+b;
+            var o="Original Number: "+d;
+           if(b>0&&b<=10)
+           {
+            if(b==d)
+            {
+                result.textContent="You are right"
+                console.log("right")
+                guess.textContent="Guessed Number: "+b
+                original.textContent="Original Number: "+d
+                console.log(b)
+                console.log(d)
+                console.log(g)
+                console.log(o)
+                
+                
+            }
+            else{
+                result.textContent="You are wrong"
+                console.log("wrong")
+                guess.textContent="Guessed Number: "+b
+                original.textContent="Original Number: "+d
+                console.log(b)
+                console.log(d)
+                console.log(g)
+                console.log(o)
+                alert("Oops!, Your answer are wrong") /*which is used to pop alert*/
+                
+            }
+        }
+        if(b>10){
+            alert("Number is greater than 10,please put the number in between 1-10")
+            
+        }
+        if(b==0&&b==null)
+        {
+            alert("please put a number")
+        }
+
+        }
+
+    </script>
+    
+</body>
+</html>

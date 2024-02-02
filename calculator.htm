@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Caveat:wght@600&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+            padding:0;
+            font-family: sans-serif;
+        }
+        body{
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            height:100vh;
+        }
+        .cointainer
+        {
+            width:350px;
+            height:550px;
+            background-color: rgb(56, 55, 55);
+            border-radius:10px;
+            margin-top:50px;
+        }
+        .cointainer .calculator
+        {
+            margin-left:13px;
+        }
+        .cointainer .calculator input
+        {
+            padding:30px;
+            margin:7px;
+            width:30px;
+            height:40px;
+            background-color: transparent;
+            color:white;
+            font-size:17px;
+            border-radius:10px;
+            box-shadow: 3px 3px 5px rgb(39, 38, 38);
+            cursor:pointer;
+        }
+       
+        
+        .cointainer .calculator .display input
+        {
+          width:70%;
+          height:20px;
+          box-shadow: 3px 3px 5px rgb(39, 38, 38);
+          font-size:30px;
+          text-align:right;
+          
+        }
+        .cointainer .calculator .display{
+            margin:15px;
+        }
+        .calculator form .equ
+        {
+            width:43%
+        }
+        h1
+        {
+            position: relative;
+            bottom:45%;
+            left:33%;
+            font-family:'Caveat', cursive;
+
+        }
+       
+           
+        
+        
+    </style>
+</head>
+<body>
+    <h1>CALCULATOR</h1>
+    <div class="cointainer">
+       
+        <div class="calculator">
+            <form>
+           <div class="display"> 
+            <input type="" name="display">
+           </div>
+           <div>
+            <input type="button" value=AC  onclick="display.value=' ' ">
+            <input type="button" value=DE onclick="display.value=display.value.toString().slice(0,-1)">
+            <input type="button" value=. onclick="display.value+='.'">
+            <input type="button" value=/ onclick="display.value+='/'">
+        </div>
+           <div>
+            <input type="button" value=7 onclick="display.value+=7">
+            <input type="button" value=8  onclick="display.value+=8">
+            <input type="button" value=9 onclick="display.value+=9">
+            <input type="button" value=* onclick="display.value+='*'">
+        </div>
+           <div>
+            <input type="button" value=4  onclick="display.value+=4">
+            <input type="button" value=5  onclick="display.value+=5">
+            <input type="button" value=6 onclick="display.value+=6">
+            <input type="button" value=- onclick="display.value+='-'">
+        </div>
+           <div>
+            <input type="button" value=1 onclick="display.value+=1">
+            <input type="button" value=2 onclick="display.value+=2">
+            <input type="button" value=3 onclick="display.value+=3">
+            <input type="button" value=+ onclick="display.value+='+'">
+        </div>
+           <div>
+            <input type="button" value=0  onclick="display.value+=0">
+            <input type="button" value=00 onclick="display.value+=00">
+            <input type="button" value="=" class="equ"  onclick="display.value=eval(display.value)">
+           
+        </div>
+        </form>
+        </div>
+    </div>
+    
+        
+        
+        
+    
+    
+</body>
+</html>

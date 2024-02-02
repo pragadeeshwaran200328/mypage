@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            font-family:sans-serif
+        }
+        body{
+            height:100vh;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            background-image: url(imgs/form1.jpg);
+            font-weight:bold;
+        }
+        .container fieldset{
+            border:2px solid black;
+            width:450px;
+            justify-content: center;
+            padding-left:200px;
+            border-radius:20px;
+            padding-top:20px;
+            color:white;
+            backdrop-filter: blur(10px);
+            
+        }
+        .container fieldset .box input
+        {
+            border:2px solid  rgb(120, 192, 255);
+            box-shadow:3px 3px 10px rgb(120, 192, 255);
+        }
+        .container fieldset .input-box {
+            display:block;
+            margin:10px;
+        
+        }
+        .container fieldset .input-box label{
+            display:block;
+        }
+        .input-box input,textarea,select
+        {
+            height:30px;
+            border-radius:10px;
+            border:none;
+            margin:5px 5px 5px 0px;
+            width:50%;
+            padding:5px;
+            font-size:15px;
+        }
+        .container fieldset legend
+        {
+            text-align:right;
+        }
+        
+        
+        
+
+       
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <fieldset>
+            <legend>Registration form</legend>
+      <div class="input-box">
+      <label>First Name</label>
+      <input type=text placeholder=Eg:Pragadeeshwaran>
+    </div>
+    <div class="input-box">
+        <label>Last Name</label>
+        <input type=text placeholder=Eg:S>
+        </div>
+        <div class="input-box">
+            <label>e-mail</label>
+            <input type=email placeholder="eg.xyz@gmail.com">
+            </div>
+    <div class="input-box">
+        <label>DOB</label>
+        <input type=date>
+        </div>
+    <div class="input-box">
+        <label>Gender</label>
+        <select name="" id="">
+            <option>Male</option>
+            <option>Female</option>
+            <option>Others</option>
+        </select>
+        </div>
+    <div class="input-box address">
+        <label>Address</label>
+        <input type=text placeholder=>
+        </div>
+    <div class="input-box">
+            <label>Message</label>
+            <textarea></textarea>
+         </div>
+    <div class="input-box box">
+                <input type=submit onclick="check()" placeholder=>
+        </div>
+           
+            </fieldset>
+    </div>
+    <script>
+        function check()
+        {
+            alert("Successfully Registered")
+        }
+    </script>
+    
+      
+    
+</body>
+</html>

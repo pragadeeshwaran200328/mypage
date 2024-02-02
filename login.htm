@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>login page</title>
+    <style>
+        *{
+            margin:0px;
+            padding:0;
+            box-sizing: border-box;
+            font-family:sans-serif;
+        }
+        body{
+            display:flex;
+            justify-content: center;
+            align-items:center;
+            min-height:100vh;
+            background-image:url("imgs/back.jpg");
+            background-size: cover;
+        }
+        .wrapper{
+            background-color: purple;
+            width:420px;
+            color:#fff;
+            padding:30px;
+            border-radius:10px;
+            background: transparent;
+            border:2px #fff solid;
+            backdrop-filter: blur(20px);
+        }
+        .wrapper h1{
+            text-align: center;
+            font-size:36px;
+        }
+        .wrapper .input-box{
+            width:100%;
+            height:50px;
+            margin:30px 0;
+        }
+        .input-box input{
+            width:100%;
+            height:100%;
+            background-color: transparent;
+            border:none;
+            outline:none;
+            color:#fff;
+            border:3px solid rgba(255, 255,255,.2);
+            border-radius:40px;
+            padding:20px ;
+            border:2px solid #fff;
+        }
+        .input-box input::placeholder{
+
+            color:#fff;
+        }
+        .wrapper .password-rem{
+            display:flex;
+            justify-content:space-between;
+            font-size: 14.5px;
+            margin:15px;
+        }
+        .password-rem  a{
+            color:#fff;
+            text-decoration: none;
+
+        }
+        .password-rem  a:hover{
+            text-decoration: underline;
+        }
+        button{
+            width:100%;
+            height:45px;
+            background:#fff;
+            border:none;
+            outline:none;
+            border-radius:45px;
+            cursor: pointer;
+            font-weight:bold;
+            border:2px solid #fff;
+        }
+        .wrapper .reg-link{
+            text-align:center;
+            margin-top: 20px;
+            font-size: 14.5px;
+        }
+        .reg-link p a:hover{
+            text-decoration: underline;
+        }
+        .reg-link p a{
+            text-decoration: none;
+            color:#fff;
+            font-weight: bold;
+        }
+
+</style>
+</head>
+<body>
+    <div class="wrapper">
+    <form>
+        <h1>Login</h1>
+    <div class="input-box">
+        <input type="text" placeholder="Username"  id="id1">
+    </div>
+    <div class="input-box">
+        <input type="password" placeholder="Password" >
+    </div>
+    <div class="password-rem">
+      <label><input type="checkbox"> Remember me</label> 
+      <a href="#">Forget password?</a>
+    </div>
+    <button onclick="check()">Login</button>
+    <div class="reg-link">
+       <p>Don't have an account? <a href="#">Register</a></p>
+    </div>
+    </form>
+    </div>
+    <script>
+        function check()
+        {
+            alert("Successfully Login")
+        }
+    </script>
+   
+    
+</body>
+</html>
